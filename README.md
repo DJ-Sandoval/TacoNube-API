@@ -12,16 +12,16 @@ Cada venta genera dos tickets:
 
 ## Stack tecnológico
 
-| Capa            | Tecnología            |
-|-----------------|-----------------------|
-| Backend         | Spring Boot + Java 17 |
-| Frontend        | React.js + TypeScript |
-| Mobile          | Flutter + Dart        |
-| Base de datos   | MySQL                 |
-| DevOps          | Docker + Kubernetes   |
-| Cloud           | DigitalOcean          |
-| Documentación   | Swagger               |
-| CI/CD           | Git + GitHub Actions  |
+| Capa            | Tecnología                     |
+|-----------------|---------------------------------|
+| Backend         | Spring Boot + Java 17          |
+| Frontend        | React.js + TypeScript          |
+| Mobile          | Flutter + Dart                 |
+| Base de datos   | MySQL                          |
+| DevOps          | Docker + Kubernetes            |
+| Cloud           | Vercel                         |
+| Documentación   | Swagger                        |
+| CI/CD           | Git + GitHub Actions           |
 
 ## Módulos principales
 
@@ -51,6 +51,6 @@ _(Ir actualizando conforme avance el proyecto)_
 - [x] Repositorios (Spring Data JPA)
 - [ ] Servicios
 - [ ] Controladores / API REST
-- [ ] Autenticación (JWT)
+- [x] Autenticación (JWT)
 - [ ] Documentación Swagger
 - [ ] Dockerización
