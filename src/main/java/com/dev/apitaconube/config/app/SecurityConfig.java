@@ -22,7 +22,8 @@ public class SecurityConfig {
     // ninguno de los dos casos (te estas registrando o estas pidiendo el token).
     private static final String[] RUTAS_PUBLICAS = {
             "/api/v1/negocios/registro",
-            "/api/v1/auth/login"
+            "/api/v1/auth/login",
+            "/swagger-ui/**", "/api-docs/**"
     };
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;

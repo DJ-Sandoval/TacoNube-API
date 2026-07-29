@@ -6,6 +6,7 @@ public record NegocioResponse(
         Long id,
         String nombre,
         String email,
-        EstadoNegocio estado
+        EstadoNegocio estado,
+        String iconoUrl
 ) {
 }
