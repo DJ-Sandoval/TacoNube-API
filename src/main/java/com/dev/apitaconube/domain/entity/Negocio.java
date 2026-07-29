@@ -47,6 +47,12 @@ public class Negocio {
     @Builder.Default
     private EstadoNegocio estado = EstadoNegocio.ACTIVO;
 
+    // URL publica del icono/logo (hoy en disco local, mas adelante en
+    // DigitalOcean Spaces). Null mientras el negocio no haya subido ninguno.
+    @Size(max = 255)
+    @Column(name = "icono_url", length = 255)
+    private String iconoUrl;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
