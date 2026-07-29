@@ -33,13 +33,36 @@ Cada venta genera dos tickets:
 - Negocios (multi-tenant)
 - Pedidos con control de estados
 
-## Estructura del proyecto
+## 📂 Estructura del proyecto
 
-```
-src/main/java/com/taconube/
-├── model/              # Entidades JPA
-│   └── enums/           # Enums de dominio (estados, tipos)
-└── repository/           # Interfaces Spring Data JPA
+```text
+src/main/java/com/dev/apitaconube/
+├── config/                 # Configuración de la aplicación
+│   ├── app/                # Configuración general (CORS, Jackson, Security)
+│   ├── doc/                # Configuración de Swagger/OpenAPI
+│   ├── jwt/                # Componentes relacionados con JWT
+│   ├── mail/               # Configuración de correo
+│   └── security/           # Seguridad y autenticación
+│
+├── controller/             # Controladores REST
+├── domain/
+│   ├── entity/             # Entidades JPA
+│   └── enums/              # Enumeraciones del dominio
+│
+├── dto/
+│   ├── request/            # DTOs de entrada
+│   └── response/           # DTOs de salida
+│
+├── exception/              # Excepciones personalizadas y manejo global
+├── repository/             # Interfaces Spring Data JPA
+├── report/                 # Generación de reportes (PDF, Excel, Tickets)
+├── service/
+│   ├── interfaces/         # Contratos de servicios
+│   └── impl/               # Implementaciones de servicios
+│
+├── storage/                # Almacenamiento de archivos
+├── util/                   # Clases utilitarias
+└── ApitaconubeApplication.java
 ```
 
 ## Estado del desarrollo
@@ -47,10 +70,11 @@ src/main/java/com/taconube/
 _(Ir actualizando conforme avance el proyecto)_
 
 - [x] Diseño del esquema de base de datos (MySQL)
+- [x] arquitectura del sistema
 - [x] Entidades JPA
 - [x] Repositorios (Spring Data JPA)
 - [ ] Servicios
 - [ ] Controladores / API REST
 - [x] Autenticación (JWT)
-- [ ] Documentación Swagger
+- [x] Documentación Swagger
 - [ ] Dockerización
