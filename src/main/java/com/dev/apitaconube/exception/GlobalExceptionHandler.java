@@ -36,6 +36,24 @@ public class GlobalExceptionHandler {
         return build(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage(), request);
     }
 
+    @ExceptionHandler(CategoriaNoEncontradaException.class)
+    public ResponseEntity<ErrorResponse> handleCategoriaNoEncontrada(
+            CategoriaNoEncontradaException ex, HttpServletRequest request) {
+        return build(HttpStatus.NOT_FOUND, ex.getMessage(), request);
+    }
+
+    @ExceptionHandler(CategoriaYaExisteException.class)
+    public ResponseEntity<ErrorResponse> handleCategoriaYaExiste(
+            CategoriaYaExisteException ex, HttpServletRequest request) {
+        return build(HttpStatus.CONFLICT, ex.getMessage(), request);
+    }
+
+    @ExceptionHandler(ProductoNoEncontradoException.class)
+    public ResponseEntity<ErrorResponse> handleProductoNoEncontrado(
+            ProductoNoEncontradoException ex, HttpServletRequest request) {
+        return build(HttpStatus.NOT_FOUND, ex.getMessage(), request);
+    }
+
     // --- Validacion de entrada ----------------------------------------------
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
