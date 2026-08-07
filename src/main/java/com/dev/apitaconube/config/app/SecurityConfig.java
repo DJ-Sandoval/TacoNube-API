@@ -23,7 +23,8 @@ public class SecurityConfig {
     private static final String[] RUTAS_PUBLICAS = {
             "/api/v1/negocios/registro",
             "/api/v1/auth/login",
-            "/swagger-ui/**", "/api-docs/**"
+            "/swagger-ui/**", "/api-docs/**",
+            "/uploads"
     };
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
